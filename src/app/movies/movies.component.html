@@ -1,0 +1,42 @@
+
+
+<div class="container">
+      
+      <div class="SearchBar">
+   
+            <input class="form-control" type="text" placeholder="Search..." aria-label="Search">
+          
+      </div>
+      
+
+ <div class="card-deck">
+  <div class="row" *ngFor="let movie of movies">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{movie.thumbnail}}" >
+            <div class="card-body">
+            <h5 class="card-subtitle" >{{movie.name}}</h5>
+            <p></p>
+            <p><span class="font-weight-bold">Length: </span>{{movie.length | duration}} </p>
+            <p><span class="font-weight-bold">Directed by:</span> {{movie.director}}</p>
+            <p><span class="font-weight-bold">Actors:</span></p>
+            <ul class="comma-list">
+                  <li *ngFor="let actor of movie.actors | slice:0:3" >
+                        {{actor}}
+                  </li>
+            </ul>
+
+            <p *ngif="isDisplay" >{{movie.description}}</p>
+             
+            <p><button><i class="glyphicon glyphicon-heart" style="font-size:20px"></i> button</button></p>
+
+            <br>  
+            <button (click)="showDetails"  class="btn btn-primary">Show details</button>
+            
+           </div>
+        </div>
+  </div>
+ </div>
+
+
+
+

@@ -1,0 +1,26 @@
+.card-deck{
+   padding-top: 2%;
+   padding-bottom: 5%;
+   padding-left: 12%;
+}
+.card{
+   background-color:lavender;
+}
+
+h5{
+   text-align: center;
+
+}
+
+.container{
+   padding-top: 5%;
+}
+
+.form-control{
+   justify-content: center;
+}
+.SearchBar {
+  padding-top: 1%;
+  padding-left: 40%;
+  padding-right: 40%;
+}
